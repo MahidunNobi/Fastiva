@@ -33,6 +33,7 @@ const Page = () => {
     },
   });
 
+  console.log(myBookings);
   const handleApprove = async (id: string) => {
     const res = await axios.patch(`/my-pending-bookings/api/${id}`, {
       status: "approved",

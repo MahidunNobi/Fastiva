@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,12 +6,13 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-.hero-bg-image{
-  background-image: linear-gradient(to right, #333333c7, #333333c7), url("../assets/bg-1.jpg");
+.hero-bg-image {
+  background-image: linear-gradient(to right, #333333c7, #333333c7),
+    url("/bg-1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height:92vh;
+  min-height: 92vh;
 }
 
 .roboto {
