@@ -1,4 +1,5 @@
 import connectDB from "@/lib/connectDB"
+import Booking from "@/models/BookingModel"
 import Service from "@/models/ServiceModel"
 import { Types } from "mongoose"
 import { NextRequest, NextResponse } from "next/server"
@@ -19,7 +20,12 @@ export const DELETE = async(req:NextRequest, {params}:{params: Promise<{id:strin
     const {id}= await params
     try {
         await connectDB()
-        await Service.findByIdAndDelete(new Types.ObjectId(id))        
+        const service = await Service.findOne({_id:new Types.ObjectId(id)})
+
+        await Booking.deleteMany({service: service?._id})
+
+        await service?.deleteOne()
+        
         return NextResponse.json({message: "Service Deleted Successfully"})
     } catch (error) {
         console.log(error)
