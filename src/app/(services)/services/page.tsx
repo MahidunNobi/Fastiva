@@ -4,6 +4,7 @@ import Title from "@/components/Shared/Title/Title";
 
 const Page = async () => {
   const services = await getServices({ limit: 6 });
+
   return (
     <main>
       <div className="container mx-auto min-h-screen">

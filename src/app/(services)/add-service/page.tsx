@@ -38,6 +38,13 @@ const Page = () => {
     const service_description = form.service_description.value;
     const service_image = form.service_image.files?.[0] || null;
 
+    if (service_image.size > 1000000) {
+      return toast({
+        variant: "destructive",
+        title: "Image size cannot be more than 1 MB",
+      });
+    }
+
     setLoading(true);
     // Saving the image and getting the url
     const formData = new FormData();
